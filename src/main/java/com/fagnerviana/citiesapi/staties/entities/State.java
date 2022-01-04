@@ -69,7 +69,7 @@ public class State {
     }
 
    public Country getCountry() {
-        return Country;
+        return country;
     }
 
   /*public Integer getCountryId() {
