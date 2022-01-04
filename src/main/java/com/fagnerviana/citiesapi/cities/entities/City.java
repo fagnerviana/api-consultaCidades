@@ -37,9 +37,12 @@ public class City {
     @Column(name = "lat_lon", updatable = false, insertable = false)
     private Point location;
 
-    public City() {
-    }
 
+
+    public City() {
+
+    }
+/*
     public City(final Long id, final String name, final Integer uf, final Integer ibge,
                 final String geolocation, final Point location) {
         this.id = id;
@@ -50,6 +53,8 @@ public class City {
         this.location = location;
     }
 
+
+ */
     public Long getId() {
         return id;
     }
@@ -70,7 +75,7 @@ public class City {
         return geolocation;
     }
 
-    public Point getLocation() {
+    /*public Point getLocation() {
         return location;
-    }
+    }*/
 }

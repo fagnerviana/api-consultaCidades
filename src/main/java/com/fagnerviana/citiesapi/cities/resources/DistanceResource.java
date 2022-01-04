@@ -1,6 +1,6 @@
 package com.fagnerviana.citiesapi.cities.resources;
 
-
+/*
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/distances")
 public class DistanceResource {
 
-    private final DistanceService service;
+    private final DistanceResource service;
     Logger log = LoggerFactory.getLogger(DistanceResource.class);
 
     public DistanceResource(DistanceService service) {
@@ -40,4 +40,4 @@ public class DistanceResource {
         log.info("byMath");
         return service.distanceUsingMath(city1, city2, unit);
     }
-}
+}*/

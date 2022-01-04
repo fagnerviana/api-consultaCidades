@@ -12,23 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("cities")
 
-public class CityResources {
+public class CityResource {
 
     private final CityRepository repository;
 
-    public CityResources(final CityRepository repository) {
+    public CityResource(final CityRepository repository) {
+
         this.repository = repository;
     }
-
-  /* 1st
-  @GetMapping
-  public List<City> cities() {
-      return repository.findAll();
-  }*/
-
-    // 2nd - Pageable
+/*
     @GetMapping
     public Page<City> cities(final Pageable page) {
+
         return repository.findAll(page);
-    }
+    }*/
 }
