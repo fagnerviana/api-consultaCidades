@@ -4,23 +4,19 @@ package com.fagnerviana.citiesapi.staties.entities;
 import com.fagnerviana.citiesapi.countries.entities.Country;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
+
 
 @Entity (name = "State")
 @Table (name = "estado")
 @TypeDefs({
         @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
 })
-
-public class State {
+public class State{
     @Id
     private Long id;
 
@@ -36,9 +32,9 @@ public class State {
   private Integer countryId;*/
 
     // 2nd - @ManyToOne
-    //@ManyToOne
-    //@JoinColumn(name = "pais", referencedColumnName = "id")
-    //private Country country;
+    @ManyToOne
+    @JoinColumn(name = "pais", referencedColumnName = "id")
+    private Country country;
 
     @Type(type = "jsonb")
     @Basic(fetch = FetchType.LAZY)
@@ -72,7 +68,7 @@ public class State {
         return country;
     }
 
-  /*public Integer getCountryId() {
-      return countryId;
+    /*public Integer getCountryId() {
+     return Id;
   }*/
 }

@@ -20,6 +20,7 @@ public class StateResource {
 
     @GetMapping
     public List<State> staties() {
+
         return repository.findAll();
     }
 }
